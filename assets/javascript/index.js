@@ -6,11 +6,12 @@ $(() => {
   
     let appState = {};
     
-    const initAppState = () => {
+    const newGameState = () => {
       const randomWordIndex = Math.floor(Math.random() * appData.words.length);
       const word = appData.words[randomWordIndex];
       const wordBoard = Array(word.length).fill('_');
-      appState = {
+      
+      return {
         currentWord: randomWordIndex,
         guessedLetters: [],
         remainingGuesses: appData.guessLimit,
@@ -85,7 +86,7 @@ $(() => {
     };
     
     const startGame = () => {
-      initAppState();
+      appState = newGameState();
       renderStatus();
       renderWordBoard();
     };
