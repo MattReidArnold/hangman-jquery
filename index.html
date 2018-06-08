@@ -13,17 +13,27 @@
 </head>
 
 <body>
-    <div id="main">
+    <div id="main" class="container">
         <h1>Hangman</h1>
         <div id="start">
             <button id="btnStart">Start</button>
         </div>
         <div id="gameBoard" class="hidden">
-            <h1>Guess the Word</h1>
-            <div id="wordBoard"></div>
-            Guessed Letters:
-            <div id="guessedLetters"></div>
-            <div id="gameStatus"></div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <h3>Guess the Word</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="wordBoard" class="col-3"></div>
+                <div class="col-3">
+                    Guessed Letters:
+                    <div id="guessedLetters"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="gameStatus" class="col-4"></div>
+            </div>
         </div>
         <div id="playAgain" class="hidden">
             <button id="btnPlayAgain">Play Again?</button>
